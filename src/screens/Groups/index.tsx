@@ -1,3 +1,4 @@
+import { Button } from "@components/Button";
 import { GroupCard } from "@components/GroupCard";
 import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
@@ -7,7 +8,12 @@ import { FlatList } from "react-native";
 import * as S from "./styles";
 
 export function Groups() {
-  const [groups, setGroups] = useState([]);
+  const [groups, setGroups] = useState([
+    "Galera da Rocket",
+    "Galera da Luby",
+    "Familia",
+    "Amigos",
+  ]);
   return (
     <S.Wrapper>
       <Header />
@@ -23,6 +29,8 @@ export function Groups() {
           <ListEmpty message="Que tal cadastrar a primeira turma?" />
         )}
       />
+
+      <Button title="Criar nova turma" />
     </S.Wrapper>
   );
 }
