@@ -3,9 +3,8 @@ import styled from "styled-components/native";
 
 export const Wrapper = styled(View)`
   flex: 1;
-  justify-content: center;
-  align-items: center;
-  background-color: #333;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
+  padding: 24px;
 `;
 
 export const CustomText = styled(Text)`
